@@ -1,0 +1,146 @@
+/* HeaderStyle.css */
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2a49;
+    position: sticky;
+    top: 0;
+    z-index: 20; /* เพิ่ม z-index ให้สูงกว่า content */
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 16px;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+    height: 60px; /* กำหนดความสูงให้ header */
+}
+#header .-brand, #header .-end {
+    display: grid;
+    align-items: center;
+}
+
+#header .-brand {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    height: 100%;
+    margin-left: 4%;
+}
+#header .-ham {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    cursor: pointer;
+    background-color: #fff;
+}
+#header.-ham:hover {
+    background-color: #f2f2f2;
+}
+#header .-ham img {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+#header .-logo {
+    padding: 0 16px;
+    width: 102px
+}
+#header .-center {
+    display: flex;
+    flex-direction: column; /* ทำให้เนื้อหาใน -center เรียงเป็นคอลัมน์ */
+    justify-content: center; /* จัดตำแหน่งในแนวตั้งให้อยู่ตรงกลาง */
+    align-items: center; /* จัดตำแหน่งในแนวนอนให้อยู่ตรงกลาง */
+    width: 100%; /* ใช้ความกว้างเต็มที่ */
+    max-width: 600px; /* กำหนดขนาดสูงสุดถ้าต้องการ */
+    margin: 0 auto; /* จัดให้ -center อยู่ตรงกลางในแนวนอน */
+}
+#header .-top, #header .-bottom {
+    width: 100%; /* ใช้ความกว้างเต็มที่ */
+}
+#header .-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .-end {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4%;
+}
+
+#header .-search-input {
+    flex: 1;
+    height: 100%;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 40px 0 0 40px;
+    outline: none;
+    font-size: x-large;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+}
+#header .-search {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+#header .-btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8c02d;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    margin: 5px; /* ลด margin ให้อยู่ภายใน -search-box */
+}
+#header .-search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    background-color: #fff;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+}
+#header .-search-input:focus-visible{
+    outline: none;
+}
+#header .-end-item {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .-end-item:hover {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+#header .-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    padding-inline: 10px;
+    transition: background-color 0.3s, transform 0.2s; /* เพิ่ม transition สำหรับสีพื้นหลังและการเคลื่อนไหว */
+}
+#header .-up:hover {
+    background-color: #44416f; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อ hover */
+}
+#header .-up p {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 10px;
+}

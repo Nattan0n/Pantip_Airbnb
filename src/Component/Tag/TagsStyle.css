@@ -1,0 +1,84 @@
+/* TagStyle.css */
+
+.tags-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* ป้องกันการแสดงผลลักษณะไม่ต้องการ */
+  }
+  
+  #content #tags {
+    display: flex;
+    align-items: center;
+    height: 56px;
+    padding: 0 24px;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-grow: 1;
+  }
+  
+/* ซ่อน scrollbar สำหรับ Webkit browsers (Chrome, Safari) */
+#content #tags::-webkit-scrollbar {
+    display: none;
+  }
+  
+  #content #tags::-webkit-scrollbar-thumb {
+    background-color: transparent; /* ทำให้ scrollbar thumb เป็นโปร่งใส */
+  }
+  
+  #content #tags::-webkit-scrollbar-track {
+    background-color: transparent; /* ทำให้ scrollbar track เป็นโปร่งใส */
+  }
+  
+  #content #tags .-item {
+    display: inline-flex;
+    height: 32px;
+    padding: 0 12px;
+    background-color: #f2f2f2;
+    color: #000;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    white-space: nowrap;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #content #tags .-item:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.1);
+  }
+  
+  #content #tags .-item.-active {
+    background-color: #000 !important;
+    color: #fff;
+  }
+  
+  .scroll-button {
+    background-color: #f2f2f2;
+    border: none;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #000;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .scroll-button.left {
+    position: absolute;
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    position: absolute;
+    right: 0;
+  }
+  

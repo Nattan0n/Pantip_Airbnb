@@ -1,0 +1,66 @@
+/* SearchStyle.css */
+
+#search {
+    display: flex;
+    justify-content: center; /* จัดกลางในแนวนอน */
+    align-items: center; /* จัดกลางในแนวตั้ง */
+    /* background-color: #2d2a49; */
+    position: sticky;
+    top: 0;
+    z-index: 20; /* เพิ่ม z-index ให้สูงกว่า content */
+    width: 100%;
+    max-width: 100vw;
+    padding: 0 16px;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+    height: auto; /* ทำให้ความสูงของ section ขึ้นอยู่กับเนื้อหาข้างใน */
+}
+#search .-search-input {
+    flex: 1; /* ขยายเพื่อใช้พื้นที่ที่เหลือ */
+    height: 100%;
+    padding: 0 1rem;
+    border: none;
+    border-radius: 40px 0 0 40px; /* ขอบโค้งเฉพาะด้านซ้าย */
+    outline: none; /* ลบขอบเงาที่เกิดจากการโฟกัส */
+    font-size: x-large;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+}
+#search  .-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 15px;
+}
+#search .-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8c02d;
+    border-radius: 50%; /* ปุ่มเป็นวงกลม */
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* ขนาดไอคอน */
+    color: #fff;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.2s; /* เพิ่ม transition สำหรับสีพื้นหลังและการเคลื่อนไหว */
+}
+#search .-btn:hover {
+    background-color: #e0a800; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
+    transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อ hover */
+}
+#search .-search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; /* กำหนดขนาดสูงสุดตามต้องการ */
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    overflow: hidden; /* ซ่อนเนื้อหาที่เกิน */
+    background-color: #fff;
+    box-sizing: border-box; /* ใช้ box-sizing เพื่อรวม padding ในการคำนวณขนาดรวม */
+}
+#search .-search-input:focus-visible{
+    outline: none;
+}

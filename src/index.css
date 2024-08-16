@@ -1,0 +1,65 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: #3c3963;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.body {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+img {
+  max-width: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+#main-layout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 60px 100px; /* Row 1: Header สูง 56px, Row 2: Content ใช้พื้นที่ที่เหลือ */
+  grid-template-columns: 1fr;   /* Column: Content ใช้พื้นที่ทั้งหมด */
+  grid-template-areas: 
+    "n"  /* Header (n) */
+    "s"  
+    "c"; /* Content (c) */
+}
+
+#header {
+  grid-area: n;  /* Header ที่อยู่ในพื้นที่ 'n' */
+}
+
+#search {
+  grid-area: s;
+}
+
+/* เพิ่ม padding และ overflow ให้กับ content */
+#content {
+  grid-area: c;
+  padding: 16px; /* เพิ่ม padding เพื่อให้มีช่องว่างรอบเนื้อหา */
+  overflow-y: auto; /* อนุญาตให้เลื่อนถ้าเนื้อหาเกิน */
+}
